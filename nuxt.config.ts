@@ -17,7 +17,7 @@ export default defineNuxtConfig({
             ]
         },
     },
-    // router: {
-    //     base: '/<repository-name>/'
-    // }
+    router: {
+        base: '/E1-7-DIG-Actividad-1/'
+    }
 });
