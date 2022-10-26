@@ -8,4 +8,8 @@ export default {
   layout: 'default',
 };
 </script>
-<style></style>
+<style>
+body {
+  font-family: 'Poppins';
+}
+</style>
