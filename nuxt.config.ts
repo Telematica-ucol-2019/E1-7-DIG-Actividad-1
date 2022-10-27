@@ -11,15 +11,14 @@ export default defineNuxtConfig({
   target: 'static',
   app: {
     head: {
+      htmlAttrs: { lang: 'en', style: 'font-family: Poppins' },
       title: /*process.env.npm_package_name ||*/ 'Brand',
-      meta: [{ name: 'description', content: 'Brand' }, { charset: 'utf-8' }],
-      link: [
-        {
-          rel: 'icon',
-          type: 'image/x-icon',
-          href: '/favicon.ico',
-        },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'Brand', content: 'Brand' },
       ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
   router: {
