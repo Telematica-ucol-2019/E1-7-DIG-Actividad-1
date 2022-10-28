@@ -4,23 +4,19 @@
       class="grid grid-cols-1 bg-white m-10 rounded items-center justify-center"
     >
       <div class="grid items-center justify-center py-12">
-        <h1 class="text-2xl">Checkout</h1>
+        <h1 class="text-2xl text-wine font-semibold">Checkout</h1>
       </div>
       <div
         class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center justify-center xl:h-screen"
       >
         <div class="flex items-center justify-center">
-          <div class="py-10">
-            <CardsCreditCard :card="card" />
-          </div>
+          <CardsCreditCard :card="card" />
         </div>
         <div class="flex items-center justify-center">
-          <div class="py-10">
-            <CardsPayment
-              v-model:card="card"
-              v-on:input="card = $event.target.value"
-            />
-          </div>
+          <CardsPayment
+            v-model:card="card"
+            v-on:input="card = $event.target.value"
+          />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white rounded-lg border border-white-200 shadow-md dark:bg-white-800 dark:border-white-700 flex items-center justify-center max-w-xs"
+    class="bg-white rounded-lg border border-white-200 shadow-md dark:bg-white-800 dark:border-white-700 flex items-center justify-center max-w-xs formulario"
   >
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
@@ -45,8 +45,8 @@
         <div class="relative z-0 mb-6 w-full group">
           <input
             type="text"
-            name="floating_expiration_date"
-            id="floating_expiration_date"
+            name="floating_expiry_date"
+            id="floating_expiry_date"
             class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
             placeholder=" "
             required
@@ -54,9 +54,9 @@
             @input="changeExpiryDateValue"
           />
           <label
-            for="floating_expiration_date"
+            for="floating_expiry_date"
             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Expiration date</label
+            >Expiry date</label
           >
         </div>
         <div class="relative z-0 mb-6 w-full group">
@@ -161,4 +161,10 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+@media (max-width: 640px) {
+  .formulario {
+    display: contents;
+  }
+}
+</style>

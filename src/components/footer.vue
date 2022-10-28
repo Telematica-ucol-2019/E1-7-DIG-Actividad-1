@@ -84,12 +84,14 @@
         </div>
       </div> -->
     <div
-      class="py-6 px-4 bg-gray-100 dark:bg-wine md:flex md:items-center md:justify-between"
+      class="py-4 px-4 bg-gray-100 dark:bg-wine md:flex md:items-center md:justify-between"
     >
-      <span class="text-sm text-white sm:text-center"
-        >© {{ new Date().getFullYear() }} {{ company }}. All Rights Reserved.
-      </span>
-      <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+      <div class="flex my-2 max-sm:justify-center">
+        <span class="text-sm text-white sm:text-center"
+          >© {{ new Date().getFullYear() }} {{ company }}. All Rights Reserved.
+        </span>
+      </div>
+      <div class="flex my-2 space-x-6 max-sm:justify-center">
         <a
           :href="'https://facebook.com/' + company"
           class="text-white hover:text-brink-pink"

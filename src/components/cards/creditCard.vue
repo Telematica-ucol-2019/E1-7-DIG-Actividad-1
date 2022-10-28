@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110"
+    class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110 max-sm:scale-90"
   >
     <div class="relative object-cover w-full h-full rounded-xl bg-wine">
       <div class="w-full px-8 absolute top-8">
@@ -10,7 +10,7 @@
             <p class="font-medium">{{ card.holdersName }}</p>
           </div>
           <svg
-            class="w-14 h-14"
+            class="w-1/5 h-1/5"
             xmlns="http://www.w3.org/2000/svg"
             width="2.11676in"
             height="1.5in"
@@ -66,8 +66,7 @@
             <div class="">
               <p class="font-bold">Expiry</p>
               <p class="tracking-wider text-sm">
-                {{ card.expiryDate }} /
-                {{ card.expiryDate }}
+                {{ card.expiryDate }}/{{ card.expiryDate }}
               </p>
             </div>
 
