@@ -5,31 +5,14 @@
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
         <input
-          type="tel"
-          inputmode="numeric"
-          pattern="\d*"
-          autocomplete="cc-number"
-          maxlength="19"
-          name="floating_card_number"
-          id="floating_card_number"
-          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
-          placeholder=" "
-          required
-        />
-        <label
-          for="floating_card_number"
-          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >Card number</label
-        >
-      </div>
-      <div class="relative z-0 mb-6 w-full group">
-        <input
           type="text"
           name="floating_card_holders_name"
           id="floating_card_holders_name"
-          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
+          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
           placeholder=" "
           required
+          :value="card.holdersName"
+          @input="changeHoldersNameValue"
         />
         <label
           for="floating_card_holders_name"
@@ -37,36 +20,61 @@
           >Card holder's name</label
         >
       </div>
+      <div class="relative z-0 mb-6 w-full group">
+        <input
+          type="text"
+          inputmode="numeric"
+          autocomplete="cc-number"
+          maxlength="16"
+          pattern="[0-9\s]{13,19}"
+          name="floating_card_number"
+          id="floating_card_number"
+          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
+          placeholder=" "
+          required
+          :value="card.number"
+          @input="changeNumberValue"
+        />
+        <label
+          for="floating_card_number"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Card number</label
+        >
+      </div>
       <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 mb-6 w-full group">
-          <input
-            type="number"
-            maxlength="3"
-            name="floating_cvv"
-            id="floating_cvv"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
-            placeholder=" "
-            required
-          />
-          <label
-            for="floating_cvv"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >CVV</label
-          >
-        </div>
         <div class="relative z-0 mb-6 w-full group">
           <input
             type="text"
             name="floating_expiration_date"
             id="floating_expiration_date"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
+            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
             placeholder=" "
             required
+            :value="card.expiryDate"
+            @input="changeExpiryDateValue"
           />
           <label
             for="floating_expiration_date"
             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >Expiration date</label
+          >
+        </div>
+        <div class="relative z-0 mb-6 w-full group">
+          <input
+            type="number"
+            max="999"
+            name="floating_cvv"
+            id="floating_cvv"
+            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-400 dark:focus:border-wine focus:outline-none focus:ring-0 focus:border-wine peer"
+            placeholder=" "
+            required
+            :value="card.securityCode"
+            @input="changeSecurityCodeValue"
+          />
+          <label
+            for="floating_cvv"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-wine peer-focus:dark:text-wine peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >CVV</label
           >
         </div>
       </div>
@@ -86,8 +94,8 @@
       <div class="flex flex-auto relative z-0 mb-6 w-full group justify-center">
         <label for="total" class="ml-2 text-s text-gray-500 dark:text-gray-400">
           <span class="text-black">Total: </span>
-          <span class="text-green-600">$</span>
-          <span class="text-green-600">500</span>
+          <span class="text-green-700">$</span>
+          <span class="text-green-700">500</span>
         </label>
       </div>
       <div class="flex flex-auto relative z-0 w-full group justify-center">
@@ -95,7 +103,7 @@
           type="submit"
           class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-wine rounded-lg hover:bg-wine focus:ring-4 focus:outline-none focus:ring-wine dark:bg-wine dark:hover:bg-wine dark:focus:ring-wine"
         >
-          Proceed to Pay
+          Proceed to pay
           <svg
             aria-hidden="true"
             class="ml-2 -mr-1 w-4 h-4"
@@ -115,12 +123,40 @@
   </div>
 </template>
 <script lang="ts">
+import { PropType } from 'vue';
+import Card from '~~/src/classes/card.js';
+
 export default {
   props: {
-    buttonText: {
-      type: String,
-      required: false,
-      default: 'Go to',
+    card: {
+      type: Object as PropType<Card>,
+      default: new Card({}),
+      required: true,
+    },
+  },
+  methods: {
+    changeCardValue() {
+      this.$emit('update:card', this.card);
+    },
+    changeExpiryDateValue(event) {
+      this.card.expiryDate = event.target.value;
+      this.changeCardValue();
+    },
+    changeHoldersNameValue(event) {
+      this.card.holdersName = event.target.value;
+      this.changeCardValue();
+    },
+    changeNumberValue(event) {
+      this.card.number = event.target.value;
+      this.changeCardValue(this.card);
+    },
+    changeSecurityCodeValue(event) {
+      this.card.securityCode = event.target.value;
+      this.changeCardValue(this.card);
+    },
+    changeValidDateValue(event) {
+      this.card.validDate = event.target.value;
+      this.changeCardValue(this.card);
     },
   },
 };

@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <navbar company="Brand" />
-    <NuxtPage class="m-10 mb rounded-2xl bg-white" />
-    <!-- <footerPage class="mt-auto" /> -->
+    <Navbar class="sticky top-0 z-10" company="Brand" />
+    <NuxtPage class="min-h-screen bg-cherry-blossom-pink" />
+    <Footer company="Brand" />
   </div>
 </template>
 <script lang="ts"></script>
