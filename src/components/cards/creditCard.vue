@@ -1,8 +1,10 @@
 <template>
   <div
-    class="w-96 h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110 max-sm:scale-90"
+    class="w-96 h-56 m-auto rounded-xl relative text-light-white dark:text-dark-wine shadow-2xl transition-transform transform hover:scale-110 max-lg:hover:scale-90 max-lg:scale-75"
   >
-    <div class="relative object-cover w-full h-full rounded-xl bg-wine">
+    <div
+      class="relative object-cover w-full h-full rounded-xl bg-light-wine dark:bg-dark-cherry-blossom-pink dark:bg-dark-siena"
+    >
       <div class="w-full px-8 absolute top-8">
         <div class="flex justify-between">
           <div class="font-bold">
@@ -84,7 +86,7 @@
 </template>
 <script lang="ts">
 import { PropType } from 'vue';
-import Card from '~~/src/classes/card.js';
+import Card from '~~/src/typescript/classes/card';
 
 export default {
   props: {

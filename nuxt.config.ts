@@ -1,14 +1,20 @@
 import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
-  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/tailwindcss'],
+  srcDir: 'src',
+  buildModules: [
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+  ],
   googleFonts: {
     families: {
       Poppins: [400, 500, 600, 700],
     },
     display: 'auto',
   },
-  srcDir: 'src',
-  target: 'static',
+  colorMode: {
+    classSuffix: '',
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en', style: 'font-family: Poppins' },
@@ -21,6 +27,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
+  target: 'static',
   router: {
     base: '/E1-7-DIG-Actividad-1/',
   },

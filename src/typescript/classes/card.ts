@@ -1,4 +1,4 @@
-import ICard from '../types/card';
+import ICard from '~~/src/typescript/interfaces/card';
 
 export default class Card implements ICard {
   public expiryDate: Date | string | undefined;

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-cherry-blossom-pink">
+  <div class="bg-light-cherry-blossom-pink dark:bg-dark-dark-siena-3">
     <NuxtLayout />
   </div>
 </template>

@@ -1,13 +1,17 @@
 <template>
   <main>
     <div
-      class="grid grid-cols-1 bg-white m-10 rounded items-center justify-center"
+      class="grid grid-cols-1 bg-light-white dark:bg-light-wine m-10 py-12 space-y-4 rounded items-center justify-center"
     >
-      <div class="grid items-center justify-center py-12">
-        <h1 class="text-2xl text-wine font-semibold">Checkout</h1>
+      <div class="grid items-center justify-center">
+        <h1
+          class="text-2xl text-light-wine dark:text-dark-cherry-blossom-pink font-semibold"
+        >
+          Checkout
+        </h1>
       </div>
       <div
-        class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center justify-center xl:h-screen"
+        class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center justify-center"
       >
         <div class="flex items-center justify-center">
           <CardsCreditCard :card="card" />
@@ -23,7 +27,7 @@
   </main>
 </template>
 <script lang="ts">
-import Card from '~/classes/card';
+import Card from '~~/src/typescript/classes/card';
 export default {
   data() {
     return {
