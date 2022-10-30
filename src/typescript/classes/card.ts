@@ -1,22 +1,22 @@
 import ICard from '~~/src/typescript/interfaces/card';
 
 export default class Card implements ICard {
-  public expiryDate: Date | string | undefined;
-  public holdersName: string | undefined;
-  public number: number | string | undefined;
-  public securityCode: number | string | undefined;
-  public validDate: Date | string | undefined;
+  public expiryDate?: string;
+  public holdersName?: string;
+  public number?: string;
+  public securityCode?: string;
+  public validDate?: string;
   constructor({
     number,
     holdersName,
     expiryDate,
     validDate,
     securityCode,
-  }: ICard | any) {
+  }: ICard) {
     this.expiryDate = expiryDate || '';
     this.holdersName = holdersName || '';
     this.number = number || '';
-    this.validDate = validDate || '';
     this.securityCode = securityCode || '';
+    this.validDate = validDate;
   }
 }

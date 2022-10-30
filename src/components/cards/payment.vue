@@ -5,35 +5,37 @@
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
         <input
-          type="text"
-          name="floating_card_holders_name"
-          id="floating_card_holders_name"
           class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+          name="floating_card_holders_name"
+          ref="floating_card_holders_name"
+          id="floating_card_holders_name"
+          type="text"
           placeholder=" "
           required
           :value="card.holdersName"
-          @input="changeHoldersNameValue"
+          @input="changeCardValue"
         />
         <label
-          for="floating_card_holders_name"
           class="peer-focus:font-medium absolute text-sm text-light-wine dark:text-dark-cherry-blossom-pink peer-focus:text-light-red-munsell dark:peer-focus:text-light-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          for="floating_card_holders_name"
           >Card holder's name</label
         >
       </div>
       <div class="relative z-0 mb-6 w-full group">
         <input
+          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+          name="floating_card_number"
+          ref="floating_card_number"
+          id="floating_card_number"
           type="text"
           inputmode="numeric"
           autocomplete="cc-number"
           maxlength="16"
           pattern="[0-9\s]{13,19}"
-          name="floating_card_number"
-          id="floating_card_number"
-          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
           placeholder=" "
           required
           :value="card.number"
-          @input="changeNumberValue"
+          @input="changeCardValue"
         />
         <label
           for="floating_card_number"
@@ -44,36 +46,38 @@
       <div class="grid md:grid-cols-2 md:gap-6">
         <div class="relative z-0 mb-6 w-full group">
           <input
-            type="text"
-            name="floating_expiry_date"
-            id="floating_expiry_date"
             class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+            name="floating_card_expiry_date"
+            ref="floating_card_expiry_date"
+            id="floating_card_expiry_date"
+            type="text"
             placeholder=" "
             required
             :value="card.expiryDate"
-            @input="changeExpiryDateValue"
+            @input="changeCardValue"
           />
           <label
-            for="floating_expiry_date"
             class="peer-focus:font-medium absolute text-sm text-light-wine dark:text-dark-cherry-blossom-pink peer-focus:text-light-red-munsell dark:peer-focus:text-light-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            for="floating_card_expiry_date"
             >Expiry date</label
           >
         </div>
         <div class="relative z-0 mb-6 w-full group">
           <input
+            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+            name="floating_card_cvv"
+            ref="floating_card_cvv"
+            id="floating_card_cvv"
             type="number"
             max="999"
-            name="floating_cvv"
-            id="floating_cvv"
-            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
             placeholder=" "
             required
             :value="card.securityCode"
-            @input="changeSecurityCodeValue"
+            @input="changeCardValue"
           />
           <label
-            for="floating_cvv"
             class="peer-focus:font-medium absolute text-sm text-light-wine dark:text-dark-cherry-blossom-pink peer-focus:text-light-red-munsell dark:peer-focus:text-light-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            for="floating_card_cvv"
             >CVV</label
           >
         </div>
@@ -131,32 +135,21 @@ export default {
     card: {
       type: Object as PropType<Card>,
       default: new Card({}),
-      required: true,
+      required: false,
     },
   },
   methods: {
     changeCardValue() {
-      this.$emit('update:card', this.card);
-    },
-    changeExpiryDateValue(event) {
-      this.card.expiryDate = event.target.value;
-      this.changeCardValue();
-    },
-    changeHoldersNameValue(event) {
-      this.card.holdersName = event.target.value;
-      this.changeCardValue();
-    },
-    changeNumberValue(event) {
-      this.card.number = event.target.value;
-      this.changeCardValue(this.card);
-    },
-    changeSecurityCodeValue(event) {
-      this.card.securityCode = event.target.value;
-      this.changeCardValue(this.card);
-    },
-    changeValidDateValue(event) {
-      this.card.validDate = event.target.value;
-      this.changeCardValue(this.card);
+      this.$emit(
+        'update:card',
+        new Card({
+          expiryDate: this.$refs.floating_card_expiry_date.value,
+          holdersName: this.$refs.floating_card_holders_name.value,
+          number: this.$refs.floating_card_number.value,
+          securityCode: this.$refs.floating_card_cvv.value,
+          validDate: this.$refs.floating_card_valid_date?.value,
+        })
+      );
     },
   },
 };

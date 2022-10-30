@@ -17,10 +17,7 @@
           <CardsCreditCard :card="card" />
         </div>
         <div class="flex items-center justify-center">
-          <CardsPayment
-            v-model:card="card"
-            v-on:input="card = $event.target.value"
-          />
+          <CardsPayment v-model:card="card" />
         </div>
       </div>
     </div>

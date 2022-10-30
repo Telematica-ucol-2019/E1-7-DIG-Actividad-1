@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
   srcDir: 'src',
+  target: 'static',
   buildModules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
@@ -27,7 +28,6 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
-  target: 'static',
   router: {
     base: '/E1-7-DIG-Actividad-1/',
   },

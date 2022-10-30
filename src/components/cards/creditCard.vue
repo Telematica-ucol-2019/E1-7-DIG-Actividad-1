@@ -50,10 +50,10 @@
         <div class="pt-1">
           <p class="font-bold">Card number</p>
           <p class="font-medium tracking-more-wider">
-            {{ card.number.toString().substring(0, 4) }}
-            {{ card.number.toString().substring(4, 8) }}
-            {{ card.number.toString().substring(8, 12) }}
-            {{ card.number.toString().substring(12, 16) }}
+            {{ card.number.substring(0, 4) }}
+            {{ card.number.substring(4, 8) }}
+            {{ card.number.substring(8, 12) }}
+            {{ card.number.substring(12, 16) }}
           </p>
         </div>
         <div class="pt-6 pr-6">

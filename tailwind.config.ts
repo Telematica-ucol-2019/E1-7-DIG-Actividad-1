@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    './src/**/*.{vue,ts}',
+    './src/**/*.{vue,js,ts}',
     './nuxt.config.{js,ts}',
     './node_modules/flowbite/**/*.js',
   ],
@@ -32,5 +32,5 @@ module.exports = {
       },
     },
   },
-  // plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin')],
 };
