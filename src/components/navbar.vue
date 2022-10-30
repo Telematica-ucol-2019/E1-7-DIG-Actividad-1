@@ -2,17 +2,21 @@
   <nav
     class="bg-light-white px-2 sm:px-4 py-2.5 dark:bg-dark-wine fixed w-full z-20 top-0 left-0 shadow"
   >
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div
+      class="container flex flex-wrap justify-between justify-items-center items-center mx-auto"
+    >
       <div class="flex lg:hidden md:order-1">
         <button
-          class="md:hidden"
+          class="inline-flex items-center p-2 text-sm text-light-wine dark:text-light-cherry-blossom-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-light-red-munsell dark:focus:ring-dark-white hover:text-light-red-munsell dark:hover:text-dark-white"
+          type="button"
           aria-label="Toggle theme mode button"
           @click="setColor($colorMode.preference == 'dark' ? 'light' : 'dark')"
         >
+          <span class="sr-only">Toggle theme</span>
           <svg
             v-if="$colorMode.value == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-light-cherry-blossom-pink"
+            class="h-6 w-6 text-light-cherry-blossom-pink hover:text-dark-white"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -38,7 +42,7 @@
       <div class="flex lg:order-1 md:order-2">
         <NuxtLink
           to="/"
-          class="flex items-center"
+          class="flex flex-col items-center"
           aria-label="Brand company's icon"
         >
           <!-- <img
@@ -56,7 +60,7 @@
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"
-          class="inline-flex items-center p-2 text-sm text-light-wine dark:text-light-cherry-blossom-pink rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-light-red-munsell dark:focus:ring-dark-white hover:text-light-red-munsell dark:hover:text-dark-white dark:hover:bg-dark-siena dark:focus:ring-crimsom-ua"
+          class="inline-flex items-center p-2 text-sm text-light-wine dark:text-light-cherry-blossom-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-light-red-munsell dark:focus:ring-dark-white hover:text-light-red-munsell dark:hover:text-dark-white dark:hover:bg-dark-siena dark:focus:ring-crimsom-ua"
           aria-controls="navbar-sticky"
           aria-expanded="false"
         >
@@ -77,16 +81,16 @@
         </button>
       </div>
       <div
-        class="lg:order-2 md:order-4 hidden justify-between items-center w-full md:flex md:w-auto"
+        class="lg:order-2 md:order-4 hidden justify-between items-center w-full lg:flex lg:w-auto"
         id="navbar-sticky"
       >
         <ul
-          class="flex flex-col p-4 mt-4 bg-light-cherry-blossom-pink dark:bg-dark-dark-siena-3 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-light-white dark:bg-dark-siena md:dark:bg-light-wine border-light-wine dark:border-light-cherry-blossom-pink"
+          class="flex flex-col p-4 mt-4 bg-light-cherry-blossom-pink dark:bg-dark-dark-siena-3 rounded-lg border lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium lg:border-0 lg:bg-light-white dark:bg-dark-siena lg:dark:bg-light-wine border-light-wine dark:border-light-cherry-blossom-pink"
         >
           <li>
             <NuxtLink to="/home">
               <a
-                class="block py-2 pr-4 pl-3 md:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
+                class="block py-2 pr-4 pl-3 lg:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
                 aria-current="page"
                 >Home</a
               >
@@ -95,7 +99,7 @@
           <li>
             <NuxtLink to="/about">
               <a
-                class="block py-2 pr-4 pl-3 md:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
+                class="block py-2 pr-4 pl-3 lg:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
                 >About</a
               >
             </NuxtLink>
@@ -103,7 +107,7 @@
           <li>
             <NuxtLink to="/services">
               <a
-                class="block py-2 pr-4 pl-3 md:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
+                class="block py-2 pr-4 pl-3 lg:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
                 >Services</a
               >
             </NuxtLink>
@@ -111,22 +115,25 @@
           <li>
             <NuxtLink to="/contact">
               <a
-                class="block py-2 pr-4 pl-3 md:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
+                class="block py-2 pr-4 pl-3 lg:p-0 rounded text-light-wine dark:text-dark-cherry-blossom-pink hover:bg-light-white dark:hover:bg-light-wine hover:text-light-red-munsell dark:hover:text-light-white"
                 >Contact</a
               >
             </NuxtLink>
           </li>
         </ul>
       </div>
-      <div class="flex lg:order-3 max-md:hidden">
+      <div class="flex lg:order-3 max-lg:hidden">
         <button
+          class="inline-flex items-center p-2 text-sm text-light-wine dark:text-light-cherry-blossom-pink rounded-lg focus:outline-none focus:ring-2 focus:ring-light-red-munsell dark:focus:ring-dark-white hover:text-light-red-munsell dark:hover:text-dark-white"
+          type="button"
           aria-label="Toggle theme mode button"
           @click="setColor($colorMode.preference == 'dark' ? 'light' : 'dark')"
         >
+          <span class="sr-only">Toggle theme</span>
           <svg
             v-if="$colorMode.value == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-dark-cherry-blossom-pink hover:text-dark-white"
+            class="h-6 w-6 text-light-cherry-blossom-pink hover:text-dark-white"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

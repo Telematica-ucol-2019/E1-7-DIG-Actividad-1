@@ -5,7 +5,7 @@
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
         <input
-          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none text-light-wine dark:text-dark-cherry-blossom-pink focus:text-light-red-munsell dark:focus:text-dark-white border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
           name="floating_card_holders_name"
           ref="floating_card_holders_name"
           id="floating_card_holders_name"
@@ -23,7 +23,7 @@
       </div>
       <div class="relative z-0 mb-6 w-full group">
         <input
-          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+          class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none text-light-wine dark:text-dark-cherry-blossom-pink focus:text-light-red-munsell dark:focus:text-dark-white border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
           name="floating_card_number"
           ref="floating_card_number"
           id="floating_card_number"
@@ -46,7 +46,7 @@
       <div class="grid md:grid-cols-2 md:gap-6">
         <div class="relative z-0 mb-6 w-full group">
           <input
-            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none text-light-wine dark:text-dark-cherry-blossom-pink focus:text-light-red-munsell dark:focus:text-dark-white border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
             name="floating_card_expiry_date"
             ref="floating_card_expiry_date"
             id="floating_card_expiry_date"
@@ -64,7 +64,7 @@
         </div>
         <div class="relative z-0 mb-6 w-full group">
           <input
-            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
+            class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none text-light-wine dark:text-dark-cherry-blossom-pink focus:text-light-red-munsell dark:focus:text-dark-white border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"
             name="floating_card_cvv"
             ref="floating_card_cvv"
             id="floating_card_cvv"
