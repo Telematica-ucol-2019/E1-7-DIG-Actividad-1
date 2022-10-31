@@ -1,0 +1,80 @@
+{
+    "version": "0.2.0",
+    "compounds": [
+      {
+        "name": "Debug (development)",
+        "configurations": ["Server: development"]
+      },
+      {
+        "name": "Debug (production)",
+        "configurations": ["Server: production"]
+      },
+      {
+        "name": "Install & debug (development)",
+        "configurations": ["Server: development"],
+        "preLaunchTask": "Install & build"
+      },
+      {
+        "name": "Install & debug (production)",
+        "configurations": ["Server: production"],
+        "preLaunchTask": "Install & build"
+      },
+      {
+        "name": "Debug (development + client)",
+        "configurations": ["Server: development", "Client"]
+      },
+      {
+        "name": "Debug (production + client)",
+        "configurations": ["Server: production", "Client"]
+      },
+      {
+        "name": "Install & debug (development + client)",
+        "configurations": ["Server: development", "Client"],
+        "preLaunchTask": "Install & build"
+      },
+      {
+        "name": "Install & debug (production + client)",
+        "configurations": ["Server: production", "Client"],
+        "preLaunchTask": "Install & build"
+      }
+    ],
+    "configurations": [
+        {
+          "type": "msedge",
+          "request": "launch",
+          "name": "Client",
+          "url": "http://localhost:3000",
+          "webRoot": "${workspaceFolder}"
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Server: development",
+          "args": ["dev"],
+          "osx": {
+            "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+          },
+          "linux": {
+            "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+          },
+          "windows": {
+            "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.mjs"
+          }
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Server: production",
+          "args": ["start"],
+          "osx": {
+            "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+          },
+          "linux": {
+            "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+          },
+          "windows": {
+            "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.mjs"
+          }
+        },
+      ]
+  }
