@@ -3,5 +3,6 @@ export default interface ICard {
   holdersName?: string;
   number?: string;
   securityCode?: string;
+  type?: string;
   validDate?: string;
 }

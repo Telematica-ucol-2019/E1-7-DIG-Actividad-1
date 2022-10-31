@@ -3,51 +3,28 @@
     class="w-96 h-56 m-auto rounded-xl relative text-light-white dark:text-dark-wine shadow-2xl transition-transform transform hover:scale-110 max-lg:hover:scale-90 max-lg:scale-75"
   >
     <div
-      class="relative object-cover w-full h-full rounded-xl bg-light-wine dark:bg-dark-cherry-blossom-pink dark:bg-dark-siena"
+      class="flex items-center justify-center object-cover w-full h-full rounded-xl bg-light-wine dark:bg-dark-cherry-blossom-pink dark:bg-dark-siena"
     >
-      <div class="w-full px-8 absolute top-8">
-        <div class="flex justify-between">
+      <div class="w-full px-6 py-4">
+        <div class="flex py-2 justify-between items-center">
           <div class="font-bold">
             <p>Cards holder's name</p>
             <p class="font-medium">{{ card.holdersName }}</p>
           </div>
-          <svg
-            class="w-1/5 h-1/5"
-            xmlns="http://www.w3.org/2000/svg"
-            width="2.11676in"
-            height="1.5in"
-            viewBox="0 0 152.407 108"
-          >
-            <g>
-              <rect width="152.407" height="108" style="fill: none" />
-              <g>
-                <rect
-                  x="60.4117"
-                  y="25.6968"
-                  width="31.5"
-                  height="56.6064"
-                  style="fill: #ff5f00"
-                />
-                <path
-                  d="M382.20839,306a35.9375,35.9375,0,0,1,13.7499-28.3032,36,36,0,1,0,0,56.6064A35.938,35.938,0,0,1,382.20839,306Z"
-                  transform="translate(-319.79649 -252)"
-                  style="fill: #eb001b"
-                />
-                <path
-                  d="M454.20349,306a35.99867,35.99867,0,0,1-58.2452,28.3032,36.00518,36.00518,0,0,0,0-56.6064A35.99867,35.99867,0,0,1,454.20349,306Z"
-                  transform="translate(-319.79649 -252)"
-                  style="fill: #f79e1b"
-                />
-                <path
-                  d="M450.76889,328.3077v-1.1589h.4673v-.2361h-1.1901v.2361h.4675v1.1589Zm2.3105,0v-1.3973h-.3648l-.41959.9611-.41971-.9611h-.365v1.3973h.2576v-1.054l.3935.9087h.2671l.39351-.911v1.0563Z"
-                  transform="translate(-319.79649 -252)"
-                  style="fill: #f79e1b"
-                />
-              </g>
-            </g>
-          </svg>
+          <img
+            class="w-1/5 h-1/5 justify-end rounded-lg bg-light-white dark:bg-dark-white"
+            src="~/assets/svg/mastercard.svg"
+            alt="Mastercard logo"
+            v-show="card.type === 'Mastercard'"
+          />
+          <img
+            class="w-1/5 h-1/5 justify-end rounded-lg bg-light-white dark:bg-dark-white"
+            src="~/assets/svg/visa.svg"
+            alt="Visa logo"
+            v-show="card.type === 'Visa'"
+          />
         </div>
-        <div class="pt-1">
+        <div class="py-2">
           <p class="font-bold">Card number</p>
           <p class="font-medium tracking-more-wider">
             {{ card.number.substring(0, 4) }}
@@ -56,7 +33,7 @@
             {{ card.number.substring(12, 16) }}
           </p>
         </div>
-        <div class="pt-6 pr-6">
+        <div class="py-2 pr-6">
           <div class="flex justify-between">
             <!-- <div class="">
               <p class="font-bold">Valid</p>
