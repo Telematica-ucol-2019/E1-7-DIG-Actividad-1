@@ -13,13 +13,13 @@
           </div>
           <img
             class="w-1/5 h-1/5 justify-end rounded-lg bg-light-white dark:bg-dark-white"
-            src="~/assets/svg/mastercard.svg"
+            src="../../assets/svg/mastercard.svg"
             alt="Mastercard logo"
             v-show="card.type === 'Mastercard'"
           />
           <img
             class="w-1/5 h-1/5 justify-end rounded-lg bg-light-white dark:bg-dark-white"
-            src="~/assets/svg/visa.svg"
+            src="../../assets/svg/visa.svg"
             alt="Visa logo"
             v-show="card.type === 'Visa'"
           />
@@ -63,7 +63,7 @@
 </template>
 <script lang="ts">
 import { PropType } from 'vue';
-import Card from '~~/src/typescript/classes/card';
+import Card from '../../typescript/classes/card';
 
 export default {
   props: {

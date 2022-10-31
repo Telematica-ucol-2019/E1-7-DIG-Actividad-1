@@ -1,4 +1,4 @@
-import Theme from '~~/src/typescript/types/theme';
+import Theme from '../types/theme';
 export const setColor = (newTheme: Theme) => {
   useColorMode().preference = newTheme;
 };

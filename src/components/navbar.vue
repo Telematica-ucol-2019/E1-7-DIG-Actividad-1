@@ -160,7 +160,7 @@
   </nav>
 </template>
 <script setup lang="ts">
-import { setColor } from '~~/src/typescript/scripts/setColor';
+import { setColor } from '../typescript/scripts/setColor';
 </script>
 <script lang="ts">
 export default {

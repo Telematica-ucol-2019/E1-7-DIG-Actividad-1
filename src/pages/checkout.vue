@@ -24,7 +24,7 @@
   </main>
 </template>
 <script lang="ts">
-import Card from '~~/src/typescript/classes/card';
+import Card from '../typescript/classes/card';
 export default {
   data() {
     return {
