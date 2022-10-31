@@ -129,7 +129,7 @@
 <script lang="ts">
 import { PropType } from 'vue';
 import Card from '../../typescript/classes/card';
-const { creditCardType } = modules;
+import { getCreditCardType } from '../../typescript/scripts/getCreditCardType';
 export default {
   props: {
     card: {
@@ -140,9 +140,7 @@ export default {
   },
   methods: {
     changeCardValue() {
-      const type = creditCardType(
-        this.$refs.floating_card_number.value
-      )?.shift()?.niceType;
+      const type = getCreditCardType(this.$refs.floating_card_number.value);
       this.$emit(
         'update:card',
         new Card({

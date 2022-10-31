@@ -16,8 +16,5 @@
     "flowbite": "^1.5.3",
     "nuxt": "3.0.0-rc.12",
     "postcss-normalize-whitespace": "^5.1.1"
-  },
-  "dependencies": {
-    "credit-card-type": "^9.1.0"
   }
 }
