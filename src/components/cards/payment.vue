@@ -128,9 +128,8 @@
 </template>
 <script lang="ts">
 import { PropType } from 'vue';
-import creditCardType from 'credit-card-type';
 import Card from '../../typescript/classes/card';
-
+const { creditCardType } = modules;
 export default {
   props: {
     card: {

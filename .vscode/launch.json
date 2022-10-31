@@ -2,22 +2,32 @@
     "version": "0.2.0",
     "compounds": [
       {
+        "name": "Build & debug (development)",
+        "configurations": ["Server: development"],
+        "preLaunchTask": "Build"
+      },
+      {
+        "name": "Build & debug (production)",
+        "configurations": ["Server: production"],
+        "preLaunchTask": "Build"
+      },
+      {
+        "name": "Build & debug (development + client)",
+        "configurations": ["Server: development", "Client"],
+        "preLaunchTask": "Build"
+      },
+      {
+        "name": "Build & debug (production + client)",
+        "configurations": ["Server: production", "Client"],
+        "preLaunchTask": "Build"
+      },
+      {
         "name": "Debug (development)",
         "configurations": ["Server: development"]
       },
       {
         "name": "Debug (production)",
         "configurations": ["Server: production"]
-      },
-      {
-        "name": "Install & debug (development)",
-        "configurations": ["Server: development"],
-        "preLaunchTask": "Install & build"
-      },
-      {
-        "name": "Install & debug (production)",
-        "configurations": ["Server: production"],
-        "preLaunchTask": "Install & build"
       },
       {
         "name": "Debug (development + client)",
@@ -28,12 +38,22 @@
         "configurations": ["Server: production", "Client"]
       },
       {
-        "name": "Install & debug (development + client)",
+        "name": "Install, build & debug (development)",
+        "configurations": ["Server: development"],
+        "preLaunchTask": "Install & build"
+      },
+      {
+        "name": "Install, build & debug (production)",
+        "configurations": ["Server: production"],
+        "preLaunchTask": "Install & build"
+      },
+      {
+        "name": "Install, build & debug (development + client)",
         "configurations": ["Server: development", "Client"],
         "preLaunchTask": "Install & build"
       },
       {
-        "name": "Install & debug (production + client)",
+        "name": "Install, build & debug (production + client)",
         "configurations": ["Server: production", "Client"],
         "preLaunchTask": "Install & build"
       }
