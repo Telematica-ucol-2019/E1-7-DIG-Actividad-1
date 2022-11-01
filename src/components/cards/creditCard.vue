@@ -9,7 +9,9 @@
         <div class="flex py-2 justify-between items-center">
           <div class="font-bold">
             <p>Cards holder's name</p>
-            <p class="font-medium">{{ card.holdersName }}</p>
+            <p class="font-medium tracking-more-wider">
+              {{ card.holdersName }}
+            </p>
           </div>
           <img
             class="w-1/5 h-1/5 justify-end rounded-lg bg-light-white dark:bg-dark-white"
@@ -37,21 +39,21 @@
           <div class="flex justify-between">
             <!-- <div class="">
               <p class="font-bold">Valid</p>
-              <p class="font-medium tracking-wider text-sm">
+              <p class="tracking-wider font-medium tracking-more-wider">
                 {{ card.validDate }} /
                 {{ card.validDate }}
               </p>
             </div> -->
             <div class="">
               <p class="font-bold">Valid thru</p>
-              <p class="tracking-wider text-sm">
+              <p class="tracking-wider font-medium tracking-more-wider">
                 {{ card.expiryDate }}
               </p>
             </div>
 
             <div class="">
               <p class="font-bold">CVV</p>
-              <p class="tracking-more-wider text-sm">
+              <p class="tracking-wider font-medium tracking-more-wider">
                 {{ card.securityCode }}
               </p>
             </div>
