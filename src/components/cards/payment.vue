@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-light-white dark:bg-dark-dark-siena-1 max-lg:bg-transparent dark:max-lg:bg-transparent black:max-sm:bg-transparent rounded-lg lg:border lg:dark:border-none lg:shadow-md flex items-center justify-center max-w-xs"
+    class="bg-light-white dark:bg-dark-dark-siena-1 max-lg:bg-transparent dark:max-lg:bg-transparent black:max-sm:bg-transparent rounded-lg lg:border lg:dark:border-none lg:shadow-md flex items-center justify-center max-w-sm"
   >
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
@@ -45,7 +45,7 @@
           >Card number</label
         >
       </div>
-      <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="grid grid-cols-2 gap-6">
         <div class="relative z-0 mb-6 w-full group">
           <input
             class="block py-2.5 px-0 w-full text-sm text-crimsom-ua bg-transparent border-0 border-b-2 appearance-none text-light-wine dark:text-dark-cherry-blossom-pink focus:text-light-red-munsell dark:focus:text-dark-white border-light-wine dark:border-dark-cherry-blossom-pink focus:border-light-red-munsell dark:focus:border-light-white focus:outline-none focus:ring-0 peer"

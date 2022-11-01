@@ -43,7 +43,7 @@
               </p>
             </div> -->
             <div class="">
-              <p class="font-bold">Expiry</p>
+              <p class="font-bold">Valid thru</p>
               <p class="tracking-wider text-sm">
                 {{ card.expiryDate }}
               </p>
