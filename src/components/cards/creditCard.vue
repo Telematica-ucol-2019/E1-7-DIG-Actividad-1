@@ -45,7 +45,7 @@
             <div class="">
               <p class="font-bold">Expiry</p>
               <p class="tracking-wider text-sm">
-                {{ card.expiryDate }}/{{ card.expiryDate }}
+                {{ card.expiryDate }}
               </p>
             </div>
 

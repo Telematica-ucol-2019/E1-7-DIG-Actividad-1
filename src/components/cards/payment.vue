@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-light-white dark:bg-dark-dark-siena-1 max-sm:bg-transparent black:max-sm:bg-transparent rounded-lg lg:border lg:dark:border-none lg:shadow-md flex items-center justify-center max-w-xs formulario"
+    class="bg-light-white dark:bg-dark-dark-siena-1 max-lg:bg-transparent dark:max-lg:bg-transparent black:max-sm:bg-transparent rounded-lg lg:border lg:dark:border-none lg:shadow-md flex items-center justify-center max-w-xs"
   >
     <form class="p-10">
       <div class="relative z-0 mb-6 w-full group">
@@ -27,9 +27,11 @@
           name="floating_card_number"
           ref="floating_card_number"
           id="floating_card_number"
-          type="text"
+          type="number"
           inputmode="numeric"
           autocomplete="cc-number"
+          min="-9999999999999999"
+          max="9999999999999999"
           maxlength="16"
           pattern="[0-9\s]{13,19}"
           placeholder=" "
@@ -156,10 +158,4 @@ export default {
   },
 };
 </script>
-<style>
-@media (max-width: 640px) {
-  .formulario {
-    display: contents;
-  }
-}
-</style>
+<style></style>
